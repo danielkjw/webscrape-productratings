@@ -74,19 +74,33 @@ time.sleep(2)
 # Click review button to go to the review section
 wait_review = WebDriverWait(driver, 10)
 time.sleep(2)
-review_button = wait_review.until(EC.presence_of_element_located((By.XPATH,'//div[@class="grpRating"]')))
-review_button.click()
-try:
-    !driver.find_element_by_xpath('//li[id="Community_Tab"]').isEmpty()
 
+try:
+    review_button = wait_review.until(EC.presence_of_element_located((By.XPATH,'//div[@class="grpRating"]')))
+    review_button.click()
+except:
+    try:
+        review_button = driver.find_elements_by_xpath('//div[@class="rn-navSections fix"]//li[@id="Community_Tab"]')
+        review_button.click()
+    except:
+        print("no buttons to click")
+        driver.close()
+        pass
+    
+    
 
 review_wait = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,'//div[@class="comments-cell has-side-left is-active"]')))
-review_num = Select(driver.find_element_by_xpath('//*[@id="reviewPageSize"]'))
-review_num.select_by_value('100')
 
+try:
+    review_num = Select(driver.find_element_by_xpath('//*[@id="reviewPageSize"]'))
+    review_num.select_by_value('100')
+except:
+    print("no page sizes")
+    pass
+    
 # review_num = Select(driver.find_element_by_xpath('//*[@id="reviewPageSize"]'))
 
-csv_file = open('productreviews.csv', 'w', encoding='utf-8', newline='')
+csv_file = open('productreviews.csv', 'w', encoding='utf-8', newline='\n')
 writer = csv.writer(csv_file)
 index = 1
 
@@ -96,50 +110,73 @@ try:
     # Find all the reviews on the page
     time.sleep(2)
     wait_review = WebDriverWait(driver, 10)
-    reviews = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,'//div[@class="comments-cell has-side-left is-active"]')))
+    reviews = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,'//div[@id="Community_Content"]//div[@class="comments"]//div[@class="comments-cell has-side-left is-active"]')))
     for review in reviews:
         # Initialize an empty dictionary for each review
         review_dict = {}
-
         # driver.execute_script("arguments[0].scrollIntoView(true);", review)
         # Use relative xpath to locate the title, text, username, date, rating.
         # Once you locate the element, you can use 'element.text' to return its string.
         # To get the attribute instead of the text of each element, use 'element.get_attribute()
         try:
-            username = review.find_element_by_xpath('.//div[@class="comments-name"]').text
-            title = review.find_element_by_xpath('.//div[@class="comments-title-content"]').text
-            rating = review.get_attribute(('.//div[@class="comments-title"]/i'))
-            review_date = review.find_element_by_xpath('.//span[@class="comments-text comments-time comments-time-right"]/').text
-            review_time = review.find_element_by_xpath('.//span[@class="comments-text comments-time comments-time-right"]/').text
+            username1 = review.find_element_by_xpath('.//div[@class="comments-name"]//a')
+            username = username1.get_attribute('text')
+            print('username', username)
+            title = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//span[@class="comments-title-content"]').text
+            print('title',title)
+            print('rating')
+            rating = review.find_element_by_xpath('.//div[@class="comments-title"]//i').get_attribute('class')
+            print('rating',rating)
+            review_date = review.find_element_by_xpath('.//span[@class="comments-text comments-time comments-time-right"]').get_attribute('content')
+            print('date',review_date)
+            review_time = review.find_element_by_xpath('.//span[@class="comments-text comments-time comments-time-right"]').text
+            print('time',review_time)
             try:
-                pros = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//div[class="comments-content"]/p[0]').text
-                cons = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//div[class="comments-content"]/p[1]').text
-                overview = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//div[class="comments-content"]/p[1]').text
+                r1 = review.find_element_by_xpath('.//div[@class="comments-content"]/p[1]').text
+                r2 = review.find_element_by_xpath('.//div[@class="comments-content"]/p[2]').text
+                r3 = review.find_element_by_xpath('.//div[@class="comments-content"]/p[3]').text
+                reviews = r1 + r2 + r3
+                print("reviews", reviews)
             except:
-                overview = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//div[class="comments-content"]/p').text
-                continue
+                try:
+                    r1 = review.find_element_by_xpath('.//div[@class="comments-content"]//p[1]').text
+                    r2 = review.find_element_by_xpath('.//div[@class="comments-content"]//p[2]').text
+                    r3 = review.find_element_by_xpath('.//div[@class="comments-content"]//p[3]').text
+                    reviews = r1 + ";" + r2 + ";" + r3
+                    print("reviews", reviews)
+                except:
+                    continue
         except:
-            continue
-        
-        # driver.execute_script("arguments[0].scrollIntoView(true);", review)
-       
+            print("error in review")
+        #     continue
+        # /html/body/div[6]/div[1]/div[1]/div[2]/div/div[3]/div[3]/div[6]/div[5]/div[80]/div[2]/div/div[2]/div/div[1]/p[2]/text()[1]
+        # //*[@id="Community_Content"]/div[5]/div[80]/div[2]/div/div[2]/div/div[1]/p[2]/text()[1]
+        # //*[@id="Community_Content"]/div[5]/div[80]/div[2]/div/div[2]/div/div[1]/p[2]/text()[2]
+        # //*[@id="Community_Content"]/div[5]/div[80]/div[2]/div/div[2]/div/div[1]/p[2]/text()[1]
+        # //*[@id="Community_Content"]/div[5]/div[80]/div[2]/div/div[2]/div/div[1]/p[2]/text()[1]
+        # //*[@id="Community_Content"]/div[5]/div[15]/div[2]/div/div[2]/div/div[1]/p[2]
+        # //*[@id="Community_Content"]/div[5]/div[15]/div[2]/div/div[2]/div/div[1]/p[2]/strong
+        # //*[@id="Community_Content"]/div[5]/div[15]/div[2]/div/div[2]/div/div[1]/p[2]/text()[1]
+        # //*[@id="Community_Content"]/div[5]/div[15]/div[2]/div/div[2]/div/div[1]/p[2]/text()[2]
+
+    #     //*[@id="Community_Content"]/div[5]/div[15]/div[2]/div/div[2]/div/div[1]/p[1]/strong
+    #     //*[@id="Community_Content"]/div[5]/div[15]/div[2]/div/div[2]/div/div[1]/p[2]/text()[1]
+    # #     //*[@id="Community_Content"]/div[5]/div[23]/div[2]/div/div[2]/div/div[1]/p[1]
+    #     # driver.execute_script("arguments[0].scrollIntoView(true);", review)
+    #    //*[@id="Community_Content"]/div[5]/div[23]/div[2]/div/div[2]/div/div[1]/p[3]
     
         # username = review.find_element_by_xpath('.//span[@class="padLeft6 NHaasDS55Rg fontSize_12 pad3 noBottomPad padTop2"]').text
         # date_published = review.find_element_by_xpath('.//span[@class="NHaasDS55Rg fontSize_12  pad3 noBottomPad padTop2"]').text
         # rating = review.find_element_by_xpath('.//span[@class="positionAbsolute top0 left0 overflowHidden color_000"]').get_attribute('style')
         # rating = int(re.findall('\d+', rating)[0])/20
 
-        review_dict['name'] = name
         review_dict['title'] = title
         review_dict['rating'] = rating
         review_dict['date'] = review_date
         review_dict['time'] = review_time
-        review_dict['pros'] = pros
-        review_dict['cons'] = cons
-        review_dict['overview'] = overview
+        review_dict['reviews'] = reviews
         review_dict['username'] = username
         
-
         writer.writerow(review_dict.values())    
 except:
     print('error')
