@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\bestbuy\\bestbuy"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"python.condaPath": "C:\\Users\\danie\\Anaconda3",
+		"python.pythonPath": "C:\\Users\\danie\\Anaconda3"
+	}
+}
