@@ -1,0 +1,95 @@
+(function($){
+    widthUpdate = function(template) {
+        //Get container width and set classes if needed
+        var containerWidth = $( '#'+template ).parent().width();
+        if(containerWidth < 600) {
+            $( '#'+template ).addClass('flix-width-500');
+        } else if(containerWidth < 810) {
+            $( '#'+template ).addClass('flix-width-800');
+        } else if(containerWidth < 1000) {
+            $( '#'+template ).addClass('flix-width-1000');
+        }
+    }
+
+    $( document ).ready(function() {
+        widthUpdate("flix-nvidia-inpage");
+    });
+
+    $(window).resize(function() {
+        widthUpdate("flix-nvidia-inpage");
+    });
+})(FlixjQ);
+
+
+
+//load jwplayer
+/******************************/
+function loadJWScript(e,t){if(-1!=e.search(".js")&&0===FlixjQ("script[src='"+e+"']").length){var c=document.createElement("script");c.type="text/javascript",c.src=e,c.onload=t,document.head.appendChild(c)}if(-1!=e.search(".css")&&0===FlixjQ("link[href='"+e+"']").length){var n=document.createElement("link");n.rel="stylesheet",n.href=e,n.type="text/css",n.onload=t,document.head.appendChild(n)}}
+
+//if JW videos exist, load JWlibrary
+FlixjQ( document ).ready(function() {
+    if(FlixjQ('.flix-jw, .flix_jw_videoid, #fullMultidata, .flix-jwlight').length>0){
+
+        loadJWScript("//media.flixcar.com/delivery/static/jwplayer/js/video.js");
+        //loadJWScript("//dev-delivery.flix360.com/static/jwplayer/js/video.js");
+
+    }
+});
+//jwplayer ends
+
+
+//widths checks for Complimentary pages
+var nvidiawidths = [ 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 830, 870, 900,950,1000,1050,1100,1150,1200,1250,1300 ];
+nvidiaresize = function() {
+	    if(FlixjQ('#flix-nvidia-block').length > 0){
+	      var container_width = FlixjQ( 'div[id^="flix-nvidia-block"]:visible' ).parent().width();
+	      var container_class = '';
+	      //console.log("container_width " + container_width)
+	      for( var index in nvidiawidths ){
+	        if ( container_width > nvidiawidths[index] ) continue;
+	        
+	        if ( ( index - 1 ) < 0 )
+	          index = 0;
+	        
+	        var found_width = nvidiawidths[index];
+	        
+	        container_class = 'nvidia_inpage_' + found_width;
+	        //console.log("container_class " + container_class)
+	        break;
+	      }
+	      
+	      FlixjQ( 'div[id^="flix-nvidia-block"]:visible' ).attr( 'class', container_class );
+	    }
+}
+setTimeout(function(){
+	nvidiaresize();
+}, 2000);
+
+FlixjQ( window ).bind( 'resize', nvidiaresize);
+
+//Get container width and set classes if needed
+nvidWidth = function() {
+  var page = FlixjQ('#flix-nvidia-container');
+  if( page.is(":visible") === true && FlixjQ(page).length > 0 ) {
+      var containerWidth = FlixjQ( 'div[id^="flix-nvidia-container"]:visible' ).innerWidth();
+      //console.log("containerWidth =" + containerWidth);
+      if (containerWidth <= 600) {
+          page.attr('class', 'flix-width-550');
+      } else if (containerWidth < 870) {
+          page.attr('class', 'flix-width-800');
+      } else if (containerWidth < 1000) {
+          page.attr('class', 'flix-width-1000');
+      } else {
+          page.attr('class', 'flix-width-2000');
+      }
+  } else {
+      setTimeout(function(){
+          nvidWidth();
+      }, 2000);
+  }
+}
+
+setTimeout(function(){
+  nvidWidth();
+}, 2000);
+FlixjQ( window ).bind( 'resize', nvidWidth);

@@ -1,0 +1,72 @@
+setCookie=function(e,t,o){e="edge";var s=new Date;s.setTime(s.getTime()+220752e7);var n="expires="+s.toUTCString();sessionStorage.setItem(e,t),document.cookie=e+"="+t+";"+n+";path=/"},getCookie=function(e){for(var t=(e="edge")+"=",o=decodeURIComponent(document.cookie).split(";"),s=0;s<o.length;s++){for(var n=o[s];" "==n.charAt(0);)n=n.substring(1);if(0==n.indexOf(t))return sessionStorage.setItem(e,n.substring(t.length,n.length)),sessionStorage.getItem(e)}return sessionStorage.getItem(e)?sessionStorage.getItem(e):""};
+(function(d) {
+    var nlink = d.head;
+    var visitor = -1;
+    var ENVIRONMENT = "prod";
+    //var TRACKING_URL = "https://api.nvidia.partners/edge/pixel";
+      var TRACKING_URL = "https://api.nvidia.partners/telemetry/v1/activity/etail";
+
+    eventTrack = function(_event, _section, _redirectUrl, itemid, elem) {
+        var _vid = getCookie("edge");
+        if (_vid !== "") {
+            _vid = atob(_vid);
+        } else {
+            _vid = null
+        }
+        var _data = {
+            "id": null,
+            "type": _event,
+            "visitorId": _vid,
+            "section": _section,
+            "url": window.location.href,
+            "sku":TurnToItemSku,
+            "refererUrl":document.referrer
+        }
+
+        if(_data["visitorId"]!=null && _data["visitorId"]!="" && (_data["visitorId"].length<5 || (escape(_data["visitorId"]=="ée") || escape("ée")))) {
+          _data["visitorId"]=null;
+        }
+
+        jQuery.ajax({
+            url: TRACKING_URL,
+            type: 'post',
+            dataType: 'json',
+
+            crossDomain:true,
+            contentType: 'application/json',
+           xhrFields: { withCredentials: true },
+            success: function(data) {
+
+                // visitor = data.result.visitorId;
+                // if (nvidia.visitorId() && nvidia.visitorId() != -1) {
+                // visitor = btoa(visitor);
+                // setCookie("edge", visitor, 365);
+                //
+                // }
+                if (_event == "PAGE_VISIT") {
+                    eventTrack('PAGE_VIEW', window.location.href, 'N/A', 'N/A', 'N/A');
+                    return;
+                }
+
+            },
+            data: JSON.stringify(_data)
+        });
+
+    }
+    var nvidia = {
+        build: function(id) {
+
+        },
+        visitorId: function() {
+            return visitor;
+        },
+        pixel: function(_id) {
+            setTimeout(function() {
+                var _vid = getCookie("edge");
+                eventTrack(((_vid !== "")?'PAGE_VIEW':'PAGE_VISIT'), window.location.href, 'N/A', 'N/A');
+            }, 700);
+        }
+    };
+    window.nv = nvidia;
+
+}(document));

@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.chrome.options import Options
+
 import requests
 import urllib
 from bs4 import BeautifulSoup
@@ -11,6 +13,30 @@ import os
 import time
 import re
 from http_request_randomizer.requests.proxy.requestProxy import RequestProxy
+import csv
+from random import seed
+from random import randint
+
+
+# req_proxy = RequestProxy() #you may get different number of proxy when  you run this at each time
+# proxies = req_proxy.get_proxy_list() #this will create proxy list
+
+# canada = [] #int is list of Indian proxy
+# for proxy in proxies:
+#     if proxy.country == 'Canada':
+#         canada.append(proxy)
+
+
+# PROXY = canada[1].get_address()
+# webdriver.DesiredCapabilities.CHROME['proxy']={
+#     "httpProxy":PROXY,
+#     "ftpProxy":PROXY,
+#     "sslProxy":PROXY,
+#     "proxyType":"MANUAL"
+# }
+
+
+
 
 base_url_list = ["https://www.newegg.com/p/pl?N=100007709%20601292088%20601292090%204111%204112%204113%204114%204115%204814",
 "https://www.newegg.com/p/pl?N=100007709%20601292088%20601292090%204111%204112%204113%204114%204115%204814&Page=2",
@@ -23,76 +49,123 @@ base_url_list = ["https://www.newegg.com/p/pl?N=100007709%20601292088%2060129209
 "https://www.newegg.com/p/pl?N=100007709%20601292088%20601292090%204111%204112%204113%204114%204115%204814&page=9"]
 
 
-req_proxy = RequestProxy() #you may get different number of proxy when  you run this at each time
-proxies = req_proxy.get_proxy_list() #this will create proxy list
+#webdriver setup #####
 
-# proxies[0].get_address()
-# proxies[0].country
-PROXY = proxies[0].get_address()
-webdriver.DesiredCapabilities.CHROME['proxy']={
-    "httpProxy":PROXY,
-    "ftpProxy":PROXY,
-    "sslProxy":PROXY,
-    "proxyType":"MANUAL"
-}
+options = webdriver.ChromeOptions()
+options.add_argument('--ignore-certificate-errors')
+options.add_argument('--ignore-ssl-errors')
+driver = webdriver.Chrome("chromedriver.exe",options=options)
+# driver.get(base_url)
+plists = []
 
-wait = WebDriverWait(driver, 10)
-element = wait.until(
-        at_least_n_elements_found((By.CLASS_NAME, 'my_class'), 3)
-)
-
-
-canada = [] #int is list of Indian proxy
-for proxy in proxies:
-    if proxy.country == 'Canada':
-        canada.append(proxy)
+os.chdir('./gpuscraper-project')
+with open('productlinks.txt', 'r') as file:
+    for i in file:
+        string = i + ', '
+        plists.append(string)
+plists
 
 
 
+base_test = r'https://www.newegg.com/asus-geforce-rtx-2080-ti-rog-strix-rtx2080ti-o11g-gaming/p/N82E16814126263?Item=N82E16814126263&quicklink=true'
+# for pr in plists:
+driver.get(base_test)
+time.sleep(2)
+# Click review button to go to the review section
+wait_review = WebDriverWait(driver, 10)
+time.sleep(2)
+review_button = wait_review.until(EC.presence_of_element_located((By.XPATH,'//div[@class="grpRating"]')))
+review_button.click()
+try:
+    !driver.find_element_by_xpath('//li[id="Community_Tab"]').isEmpty()
 
 
-# options = webdriver.ChromeOptions()
-# options.add_argument('--ignore-certificate-errors')
-# options.add_argument('--ignore-ssl-errors')
-# driver = webdriver.Chrome(options=options)
-# # driver.get(base_url)
+review_wait = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,'//div[@class="comments-cell has-side-left is-active"]')))
+review_num = Select(driver.find_element_by_xpath('//*[@id="reviewPageSize"]'))
+review_num.select_by_value('100')
 
-# # driver.get(base_url)
-# # driver = webdriver.Chrome("chromedriver.exe")
-# driver.get('https://www.expressvpn.com/what-is-my-ip')
+# review_num = Select(driver.find_element_by_xpath('//*[@id="reviewPageSize"]'))
+
+csv_file = open('productreviews.csv', 'w', encoding='utf-8', newline='')
+writer = csv.writer(csv_file)
+index = 1
+
+try:
+    print("Scraping Page number " + str(index))
+    index = index + 1
+    # Find all the reviews on the page
+    time.sleep(2)
+    wait_review = WebDriverWait(driver, 10)
+    reviews = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,'//div[@class="comments-cell has-side-left is-active"]')))
+    for review in reviews:
+        # Initialize an empty dictionary for each review
+        review_dict = {}
+
+        # driver.execute_script("arguments[0].scrollIntoView(true);", review)
+        # Use relative xpath to locate the title, text, username, date, rating.
+        # Once you locate the element, you can use 'element.text' to return its string.
+        # To get the attribute instead of the text of each element, use 'element.get_attribute()
+        try:
+            username = review.find_element_by_xpath('.//div[@class="comments-name"]').text
+            title = review.find_element_by_xpath('.//div[@class="comments-title-content"]').text
+            rating = review.get_attribute(('.//div[@class="comments-title"]/i'))
+            review_date = review.find_element_by_xpath('.//span[@class="comments-text comments-time comments-time-right"]/').text
+            review_time = review.find_element_by_xpath('.//span[@class="comments-text comments-time comments-time-right"]/').text
+            try:
+                pros = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//div[class="comments-content"]/p[0]').text
+                cons = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//div[class="comments-content"]/p[1]').text
+                overview = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//div[class="comments-content"]/p[1]').text
+            except:
+                overview = review.find_element_by_xpath('.//div[@class="comments-cell-body"]//div[class="comments-content"]/p').text
+                continue
+        except:
+            continue
+        
+        # driver.execute_script("arguments[0].scrollIntoView(true);", review)
+       
+    
+        # username = review.find_element_by_xpath('.//span[@class="padLeft6 NHaasDS55Rg fontSize_12 pad3 noBottomPad padTop2"]').text
+        # date_published = review.find_element_by_xpath('.//span[@class="NHaasDS55Rg fontSize_12  pad3 noBottomPad padTop2"]').text
+        # rating = review.find_element_by_xpath('.//span[@class="positionAbsolute top0 left0 overflowHidden color_000"]').get_attribute('style')
+        # rating = int(re.findall('\d+', rating)[0])/20
+
+        review_dict['name'] = name
+        review_dict['title'] = title
+        review_dict['rating'] = rating
+        review_dict['date'] = review_date
+        review_dict['time'] = review_time
+        review_dict['pros'] = pros
+        review_dict['cons'] = cons
+        review_dict['overview'] = overview
+        review_dict['username'] = username
+        
+
+        writer.writerow(review_dict.values())    
+except:
+    print('error')
+    csv_file.close()
+    driver.close()
+    # break
+        # OPTIONAL PART 1a
+        # Attempts to click the "read more" button to expand the text. This needs to be clicked
+        # a second time otherwise the button click in the next review will collapse the previous
+        # review text (and won't expand the current text).
+
+        # We also need to scroll to the review element first because the button is not in the current view yet.
+        
+
+
+        # writer.writerow(review_dict.values())
 
 # print(PROXY)
-
-
-# from selenium.common.exceptions import TimeoutException
-
-# base_url = "https://www.newegg.com/asus-geforce-rtx-2080-ti-rog-strix-rtx2080ti-o11g-gaming/p/N82E16814126263?&quicklink=true"
-
-# curDir = os.getcwd()
-# print(curDir)
-# # driver = webdriver.Firefox('geckodriver.exe')
-# # os.path.join(curDir, "/geckodriver.exe")
-
-# # # driver.execute_script("alert('hello')")
-# # driver.save_screenshot("test.png")
-
-
-
-
-# # ,options=options)
-# # ele = driver.find_elements_by_xpath('//*[@id="module-tableForumTopics"]/div')
-# #driver.get(base_url)
-# #$$ element selector
+# wait_review = WebDriverWait(driver, 10)
 # reviews = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,
 #                             '//div[@class="row border_grayThree onlyTopBorder noSideMargin"]')))
-                            
+
 # wait_review = WebDriverWait(driver, 10)
-# 		wait_review = WebDriverWait(driver, 10)
-# 		reviews_tab = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,
-# 									'//*[@id="Community_Tab"]')))
-# 		reviews_tab.click()
- 
-# 		reviews = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,
+# reviews_tab = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,'//*[@id="Community_Tab"]')))
+# reviews_tab.click()
+# reviews = wait_review.until(EC.presence_of_all_elements_located((By.XPATH,
 # 									'//*[@class="comments"]')))
 
 # while True:
