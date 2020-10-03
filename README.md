@@ -45,7 +45,7 @@ Questions
 
 •Do companies provide other sources of value that are not on the product specifications? 
 
-![image-20200522173732450](.images/chart1.png)
+![image-20200522173732450](./images/chart1.png)
 
 •
 
