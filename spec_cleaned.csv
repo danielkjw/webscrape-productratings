@@ -1,0 +1,117 @@
+,brand,model,interface,chipset manufacturer,gpu,effective memory clock,memory size,memory interface,memory type,hdmi,displayport
+0,asus,gv-r57xtgaming oc-8gd,PCI Express 4.0 x16,AMD,GeForce RTX 2060 SUPER,14000 MHz,6GB,192-Bit,GDDR6,1 x HDMI,3 x DisplayPort
+1,gigabyte,08g-p4-3163-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2060 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+2,evga,rx 5700 xt challenger d 8g oc,PCI Express 4.0,AMD,GeForce RTX 2080 SUPER,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+3,asrock,06g-p4-2067-kr,PCI Express 3.0,NVIDIA,GeForce GTX 1660 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+4,evga,rtx 2080 ti gaming x trio,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+5,asus,rx 5700 xt taichi x 8g oc+,PCI Express 4.0,AMD,GeForce RTX 2080 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+6,sapphire,rx 5700 xt gaming x,PCI Express 4.0,AMD,GeForce RTX 2060 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+7,msi,gv-rxvega64gaming oc-8gd,PCI Express 3.0 x16,AMD,GeForce RTX 2080 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+8,sapphire,gv-n2070wf2-8gd,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+9,asrock,rx 580 armor 8g oc,PCI Express x16,AMD,GeForce RTX 2060 SUPER,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+10,powercolor,zt-t20610d-10p,PCI Express 3.0,NVIDIA,GeForce RTX 2060 SUPER,14 Gpbs,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,2 x DisplayPort 1.4
+11,msi,11g-p4-2383-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2060 SUPER,14 Gpbs,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+12,gigabyte,rx 5700 challenger d 8g oc,PCI Express 4.0,AMD,GeForce RTX 2070 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+13,sapphire,08g-p4-3188-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2070 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+14,gigabyte,gv-n166sgaming oc-6gd,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2070 SUPER,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+15,sapphire,gv-n208sgamingoc white-8gd,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+16,msi,11g-p4-2484-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2070 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort
+17,asus,11g-p4-2382-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080 SUPER,15.5 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+18,zotac,gv-r57gaming oc-8gd,PCI Express 4.0 x16,AMD,GeForce RTX 2080 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+19,evga,11g-p4-2384-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+20,asrock,rx 5700 evoke oc,PCI Express 4.0,AMD,GeForce RTX 2080 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+21,evga,gv-n208sturbo-8gc,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2070 SUPER,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+22,gigabyte,rx-56xt6df46,PCI Express 4.0,AMD,GeForce RTX 2060 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+23,gigabyte,rx 570 armor 8g oc,PCI Express x16,AMD,GeForce RTX 2070 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+24,asus,08g-p4-3067-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2060 SUPER,12 Gbps,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+25,evga,08g-p4-3081-kr,PCI Express 3.0,NVIDIA,GeForce GTX 1660 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+26,evga,rx-55xt826d6,PCI Express 4.0,AMD,GeForce RTX 2060 SUPER,14000 MHz,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+27,asus,gtx 1660 gaming x 6g,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2060 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+28,gigabyte,rx-580p427d6,PCI Express 3.0,AMD,Radeon RX 5700 XT,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+29,evga,rx 570 armor mk2 8g oc,PCI Express x16,AMD,Radeon RX 5700 XT,14000 MHz,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+30,msi,11g-p4-2281-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2060,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+31,asrock,gv-n208sgamingoc wb-8gd,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080 Ti,8000 MHz,8GB,256-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+32,sapphire,rtx 2060 super gaming,PCI Express 3.0 x16,NVIDIA,Radeon RX 5700 XT,14000 MHz,11GB,352-Bit,GDDR6,2 x HDMI,2 x DisplayPort 1.4
+33,asus,rtx 2060 super gaming x,PCI Express 3.0 x16,NVIDIA,Radeon RX 5700 XT,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI,3 x DisplayPort 1.4
+34,gigabyte,08g-p4-2284-kr,PCI Express 3.0,NVIDIA,Radeon RX Vega 64,14000 MHz,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+35,xfx,rtx 2060 super armor oc,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2070,14000 MHz,11GB,352-Bit,GDDR6,2 x HDMI,3 x DisplayPort 1.4
+36,powercolor,08g-p4-3071-kr,PCI Express 3.0,NVIDIA,Radeon RX 580,14000 MHz,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+37,asus,rx-56xt6tf48,PCI Express 4.0,AMD,GeForce RTX 2080 Ti,14 Gbps,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,1 x DisplayPort 1.4
+38,asrock,11g-p4-6696-kr,PCI Express 3.0,NVIDIA,Radeon RX 5700,7000 MHz,8GB,256-Bit,GDDR5,1 x HDMI 2.0b,2 x DisplayPort 1.4
+39,asus,06g-p4-6267-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080 SUPER,14 Gbps,8GB,128-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+40,powercolor,rx5700-8g,PCI Express 4.0,AMD,GeForce RTX 2080 Ti,8 Gbps,6GB,192-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort
+41,msi,gv-n207sgaming oc-8gd,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080 Ti,AMD Reference,4GB,256-Bit,DDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+42,evga,rtx 2070 armor 8g oc,PCI Express 3.0 x16,NVIDIA,Radeon RX 5700,7000 MHz,8GB,256-Bit,GDDR5,1 x HDMI,2 x DisplayPort
+43,evga,gv-n208tgaming oc-11gc,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080 Ti,14000 MHz,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+44,sapphire,08g-p4-2172-kr,PCI Express 3.0,NVIDIA,Radeon RX 5700,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+45,asus,gv-n208twf3-11gc,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080 SUPER,14 Gbps,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+46,xfx,08g-p4-2287-kr,PCI Express 3.0,NVIDIA,Radeon RX 5600 XT,14000 MHz,8GB,256-Bit,GDDR6,2 x HDMI,3 x DisplayPort 1.4
+47,msi,gv-n1660gaming oc-6gd,PCI Express 3.0 x16,NVIDIA,Radeon RX 570,14000 MHz,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+48,sapphire,gv-n2070wf2-8gd rev 3.0,PCI Express 3.0 x16,NVIDIA,Radeon RX 5500 XT,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort
+49,xfx,rtx 2070 super armor oc,PCI Express 3.0 x16,NVIDIA,GeForce GTX 1660,14000 MHz,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+50,msi,08g-p4-2081-kr,PCI Express 3.0,NVIDIA,Radeon RX 580,15500 MHz,8GB,256-Bit,GDDR6,3 x HDMI 2.0b,3 x DisplayPort 1.4
+51,asus,08g-p4-2183-kr,PCI Express 3.0,NVIDIA,Radeon RX 570,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,2 x DisplayPort
+52,evga,gv-n208swf3oc-8gd,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080 Ti,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+53,gigabyte,08g-p4-3178-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080,8002 MHz,6GB,192-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+54,msi,rtx 2080 super ventus oc,PCI Express 3.0 x16,NVIDIA,Radeon RX 5600 XT,14000 MHz,8GB,256-Bit,GDDR6,3 x HDMI 2.0b,3 x DisplayPort 1.4
+55,msi,08g-p4-3288-kr,PCI Express 3.0,NVIDIA,GeForce GTX 1080 Ti,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+56,evga,08g-p4-3183-kr,PCI Express 3.0,NVIDIA,GeForce GTX 1060,14000 MHz,8GB,256-Bit,GDDR6,3 x HDMI 2.0b,3 x DisplayPort 1.4
+57,msi,rx-57xt838d8,PCI Express 4.0,AMD,Radeon RX 5700,14 Gbps,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+58,evga,rtx 2080 ventus 8g oc,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2060 SUPER,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+59,xfx,rtx 2060 gaming 6g,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2070,8000 MHz,6GB,192-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+60,evga,08g-p4-3182-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080 Ti,7000 MHz,4GB,256-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+61,evga,08g-p4-3175-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2070,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+62,asus,08g-p4-2187-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080 Ti,14.4 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+63,pny,06g-p4-1167-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080 SUPER,14.4 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+64,gigabyte,rx 570 armor 4g ocv1,PCI Express 3.0 x16,AMD,GeForce RTX 2080 SUPER,14.0 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+65,gigabyte,08g-p4-1171-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080 SUPER,14.0 Gbps,11GB,352-Bit,GDDR6,1 x HDMI,3 x DisplayPort 1.4
+66,gigabyte,08g-p4-3162-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080,12 Gbps,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+67,msi,zt-t20700c-10p,PCI Express 3.0,NVIDIA,GeForce GTX 1660,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,1 x DisplayPort 1.4
+68,gigabyte,zt-t20700b-10p,PCI Express 3.0,NVIDIA,GeForce RTX 2070,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort
+69,evga,zt-t20800d-10p,PCI Express 3.0,NVIDIA,GeForce RTX 2080,14 Gbps,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+70,gigabyte,zt-t20810f-10p,PCI Express 3.0,NVIDIA,GeForce RTX 2080,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+71,gigabyte,gv-n207sgamingoc white-8gd,PCI Express 3.0 x16,NVIDIA,Radeon RX 5700 XT,2000 MHz x4 (8.0 Gbps),8GB,256-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+72,asus,rx 5700 8g,PCI Express 4.0,AMD,GeForce RTX 2080,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+73,gigabyte,gtx 1660 ti gaming x 6g,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2060,945 MHz (1.89 Gbps),8GB,2048-Bit,HBM2,1 x HDMI 2.0b,3 x DisplayPort 1.4
+74,evga,08g-p4-3062-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2060 SUPER,14 Gbps,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+75,gigabyte,gv-n166sgaming-6gd,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2080,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+76,gigabyte,rx 5700 evoke,PCI Express 4.0,AMD,GeForce GTX 1660,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+77,msi,gv-n206sgaming oc-8gd v2.0,PCI Express 3.0 x16,NVIDIA,Radeon RX 570,14 Gbps,8GB,256-Bit,GDDR6,2 x HDMI 2.0b,3 x DisplayPort 1.4
+78,evga,rx-56xt6dfd6,PCI Express 4.0,AMD,GeForce RTX 2070,"2100 MHz, 8400 MHz Effective",8GB,256-Bit,GDDR5,1 x HDMI,3 x DisplayPort 1.4
+79,evga,gv-n206sgamingoc white-8gd rev2.0,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2070,15500 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,4 x DisplayPort 1.4
+80,gigabyte,rog-strix-rtx2080ti-o11g-gaming,PCI Express 3.0,NVIDIA,GeForce RTX 2070,OC Mode,4GB,256-Bit,GDDR5,3 x HDMI 2.0b,3 x DisplayPort 1.4
+81,evga,rog-strix-rx5700xt-o8g-gaming,PCI Express 4.0,AMD,GeForce RTX 2080,True,8GB,256-Bit,GDDR5,1 x HDMI,3 x DisplayPort 1.4
+82,gigabyte,100416nt+8gsr,PCI Express 4.0 x16,AMD,GeForce RTX 2080 Ti,2000 MHz (8.0 Gbps),8GB,256-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+83,msi,100416p8gl,PCI Express 4.0 x16,AMD,Radeon RX 5700,7000 MHz,4GB,256-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+84,evga,axrx 580 8gbd5-3dhdv2/oc,PCI Express 3.0,AMD,GeForce GTX 1660 Ti,14.4 Gbps,8GB,128-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+85,evga,100419p6gl,PCI Express 4.0,AMD,GeForce RTX 2060 SUPER,11016 MHz,11GB,352-Bit,GDDR5X,2 x HDMI 2.0b,3 x DisplayPort 1.4
+86,xfx,100416nt+sesr,PCI Express 4.0 x16,AMD,GeForce RTX 2070 SUPER,8008 MHz,6GB,192-Bit,GDDR5,1 x HDMI 2.0,2 x DisplayPort 1.4
+87,msi,rog-strix-rtx2060-o6g-gaming,PCI Express 3.0,NVIDIA,Radeon RX 5700,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort
+88,msi,dual-rtx2080s-o8g-evo-v2,PCI Express 3.0,NVIDIA,Radeon RX 5600 XT,14140 MHz,11GB,352-Bit,GDDR6,1 x HDMI,2 x DisplayPort 1.4
+89,evga,dual-rtx2080ti-o11g,PCI Express 3.0,NVIDIA,GeForce RTX 2080 Ti,14 Gbps,8GB,256-Bit,GDDR6,2 x HDMI 2.0b,3 x DisplayPort 1.4
+90,asus,rx5600xt pgd3 6go,PCI Express 4.0 x16,AMD,Radeon RX 5700 XT,15500 MHz,8GB,256-Bit,GDDR6,2 x HDMI,3 x DisplayPort
+91,evga,100411nt+8gsel,PCI Express 3.0,AMD,Radeon RX 5700 XT,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,2 x DisplayPort 1.4
+92,evga,turbo-rtx2080s-8g-evo,PCI Express 3.0,NVIDIA,Radeon RX 5700 XT,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,2 x DisplayPort 1.4
+93,evga,axrx 5700 8gbd6-3dhe/oc,PCI Express 4.0,AMD,Radeon RX 580,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+94,msi,turbo-rtx2080ti-11g,PCI Express 3.0,NVIDIA,Radeon RX 5600 XT,14 Gbps,8GB,256-Bit,GDDR6,3 x HDMI 2.0b,3 x DisplayPort 1.4
+95,evga,rx570 4g oc,PCI Express 3.0 x16,AMD,Radeon RX 5700 XT,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+96,evga,rog-strix-rtx2080ti-a11g-gaming,PCI Express 3.0,NVIDIA,GeForce RTX 2060,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+97,zotac,rx-580p8dfd6,PCI Express 3.0,AMD,GeForce RTX 2080 Ti,14 Gbps,8GB,256-Bit,GDDR6,2 x HDMI 2.0b,3 x DisplayPort 1.4
+98,zotac,axrx 580 8gbd5-3dhg/oc,PCI Express 3.0,AMD,Radeon RX 5600 XT,14000 MHz,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+99,zotac,100411nt+4gl,PCI Express 3.0,AMD,Radeon RX 580,14 Gbps,8GB,256-Bit,GDDR6,2 x HDMI 2.0b,2 x DisplayPort 1.4
+100,asus,turbo-rtx2060-6g,PCI Express 3.0,NVIDIA,Radeon RX 5700,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+101,zotac,100418nt+8gsel,PCI Express 4.0,AMD,GeForce RTX 2080 Ti,14 Gbps,8GB,256-Bit,GDDR6,2 x HDMI 2.0b,2 x DisplayPort 1.4
+102,gigabyte,dual-rtx2060-o6g,PCI Express 3.0,NVIDIA,Radeon RX 570,14.4 Gbps,8GB,256-Bit,GDDR6,2 x HDMI,3 x DisplayPort 1.4
+103,msi,03g-p4-6160-kr,PCI Express 3.0,NVIDIA,GeForce RTX 2080 Ti,14000 MHz,6GB,192-Bit,GDDR6,2 x HDMI 2.0b,2 x DisplayPort 1.4
+104,msi,vcg2080t11blppb,PCI Express 3.0,NVIDIA,Radeon RX 580,14000 MHz,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,2 x DisplayPort 1.4
+105,asus,gv-n208taorus x-11gc,PCI Express 3.0 x16,NVIDIA,Radeon RX 580,14Gbps,6GB,192-Bit,GDDR6,1 x HDMI 2.0b,2 x DisplayPort 1.4
+106,asus,gv-n206saorus-8gc,PCI Express 3.0 x16,NVIDIA,Radeon RX 580,14 Gbps,8GB,256-Bit,GDDR6,1 x HDMI,3 x DisplayPort 1.4
+107,evga,gv-n208saorus w-8gc,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2060,14000 MHz,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+108,gigabyte,dual-rtx2080s-o8g-evo,PCI Express 3.0,NVIDIA,Radeon RX 5500 XT,14000 MHz,11GB,352-Bit,GDDR6,2 x HDMI 2.0b,2 x DisplayPort 1.4
+109,asus,gv-n208saorus-8gc,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2060,14000 MHz,6GB,192-Bit,GDDR6,2 x HDMI 2.0b,2 x DisplayPort 1.4
+110,msi,gv-r57xtaorus-8gd,PCI Express 4.0 x16,AMD,GeForce GTX 1060,14000 MHz,6GB,192-Bit,GDDR6,2 x HDMI 2.0b,2 x DisplayPort 1.4
+111,gigabyte,rog-strix-rtx2060s-a8g-gaming,PCI Express 3.0,NVIDIA,GeForce RTX 2080 Ti,8008 MHz,3GB,192-Bit,GDDR5,1 x HDMI 2.0b,3 x DisplayPort 1.4
+112,xfx,dual-rtx2070-o8g,PCI Express 3.0,NVIDIA,GeForce RTX 2080 Ti,14 Gbps,11GB,352-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+113,gigabyte,dual-rtx2060s-8g-evo,PCI Express 3.0,NVIDIA,Radeon RX 5700 XT,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b                                2 x HDMI 1.4b,3 x DisplayPort 1.4
+114,xfx,rog-strix-rtx2060-a6g-gaming,PCI Express 3.0,NVIDIA,GeForce RTX 2070,14000 MHz,8GB,256-Bit,GDDR6,1 x HDMI 2.0b,3 x DisplayPort 1.4
+115,evga,dual-rtx2070s-a8g-evo,PCI Express 3.0 x16,NVIDIA,GeForce RTX 2060,14000 MHz,6GB,192-Bit,GDDR6,2 x HDMI 2.0b,2 x DisplayPort 1.4
