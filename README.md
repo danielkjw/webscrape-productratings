@@ -45,7 +45,7 @@ Questions
 
 •Do companies provide other sources of value that are not on the product specifications? 
 
-![image-20200522173732450](C:\Users\danie\AppData\Roaming\Typora\typora-user-images\image-20200522173732450.png)
+![image-20200522173732450](.images/chart1.png)
 
 •
 
@@ -53,11 +53,11 @@ Questions
 
 
 
-![image-20200522173447253](C:\Users\danie\AppData\Roaming\Typora\typora-user-images\image-20200522173447253.png)
+![image-20200522173447253](.images/image-20200522173447253.png)
 
 ## Motivation
 
-![image-20200522173639060](C:\Users\danie\AppData\Roaming\Typora\typora-user-images\image-20200522173639060.png)
+![image-20200522173639060](.images/image-20200522173639060.png)
 
 
 
