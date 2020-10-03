@@ -53,11 +53,11 @@ Questions
 
 
 
-![image-20200522173447253](.images/image-20200522173447253.png)
+![image-20200522173447253](./images/image-20200522173447253.png)
 
 ## Motivation
 
-![image-20200522173639060](.images/image-20200522173639060.png)
+![image-20200522173639060](./images/image-20200522173639060.png)
 
 
 
