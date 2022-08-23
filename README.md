@@ -127,3 +127,8 @@ In 2016, Liaison Interactive, a Chinese technology company, acquired a majority 
 ### Limitations
 
 Because a very specific product category was chosen
+
+
+# Presentation Slides
+
+![Slide01](./images/Slide 1.png)
