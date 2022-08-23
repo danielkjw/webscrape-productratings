@@ -131,4 +131,4 @@ Because a very specific product category was chosen
 
 # Presentation Slides
 
-![Slide01](./images/Slide 1.JPG)
+![Slide01](./images/Slide1.JPG)
