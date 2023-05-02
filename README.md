@@ -1,13 +1,9 @@
 # Web Scraping Project: Analysis of GPU Brand Value and Consumer Preference
 
+Update 
 
-
-**Files**:
-
-* gpuscraper.py (selenium code to scrape gpu names and reviews)
-* 
-
-
+The user reviews could use further analysis rather than analyzing individual words. 
+Perhaps, ChatGPT can be leveraged to better analyze the review data.
 
 
 
